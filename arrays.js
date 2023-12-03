@@ -4,7 +4,6 @@ arr = new Array(1,2,3,4,5)
 console.log("Array length of arr is: "+arr.length)
 
 // Easy way of Array initialization
-
 let nums = [1,2,3,4,5]
 console.log(nums)
 console.log("first element: "+nums[0])
@@ -22,7 +21,7 @@ console.log(nums.indexOf(12))
 //Array contains
 console.log(nums.includes(33))
 
-//Create sub array from main array
+//Create sub array from main array takes 2 args: index and position of element
 subarr = nums.slice(1,5)
 console.log(subarr)
 
@@ -33,13 +32,15 @@ for(let i=0; i<subarr.length; i++){
 }
 console.log(sum)
 
-// Code optimization: reduce filter map =>
+// Code optimization: reduce, filter, map =>
 let total = subarr.reduce((acc,subval)=>acc+subval,0)
 console.log(total)
 
+// filter: gives sub array
 let even_nums = nums.filter(num=>num%2==0)
 console.log(even_nums)
 
+// map: manipulations on array elements
 let mularr = subarr.map(sub=>sub*3)
 console.log("3x subarr is: " + mularr)
 
@@ -52,5 +53,6 @@ let names = ["john","bob","damon","chris"]
 console.log(names.sort()) //string sorting ascending
 console.log(names.reverse()) //string sorting descending
 
-console.log(nums.sort((a,b)=>a-b)) //Sorting of numbers using recursive bubble sort algorithm
-console.log(nums.reverse((a,b)=>a-b)) //Sorting of numbers descending
+console.log(nums.sort((a,b)=>a-b)) //Sorting of numbers ascending using recursive bubble sort algorithm
+console.log(nums.sort((a,b)=>b-a)) //Sort in descending order using sort function
+console.log(nums.reverse((a,b)=>a-b)) //Sorting of numbers descending using reverse function

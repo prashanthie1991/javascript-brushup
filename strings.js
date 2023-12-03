@@ -13,7 +13,7 @@ console.log(pnames[2].length)
 let second_name = pnames[2].trim()
 console.log(second_name.length)
 
-// type conversions & concatination
+// type conversions - parseInt and toString functions & concatination
 let a = '25'
 let b = '20'
 let c = parseInt(a)-parseInt(b)
